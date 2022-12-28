@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html + css + js</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+
+    <!-- FA5 CSS -->
+    <link rel="stylesheet" href="./assets/fa/css/all.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <script src="./assets/js/app.js"></script>
+  </head>
+  <body onload="calc()">
+    <div class="container border mt-5" style="width: 35rem">
+      <div class="card-body">
+        <h3 class="text-center">Индекс массы тела</h3>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1" style="width: 200px"
+            >Ваш рост(метр)</span
+          >
+          <input
+            onclick="calc()"
+            id = "heightInput"
+            type="number"
+            class="form-control"
+            
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+            min="40" max="250" value="165"
+            pattern="^([0-9]{3}|[0-9]{1}[.]?[0-9]{2}|[0-9]{1}[,]?[0-9]{2})$"
+          />
+        </div>
+        <small class="form-text text-muted mb-4 ">
+            * Oбязательно к заполнению.
+          </small>
+
+        <!--  <small class="form-text text-muted valid-label mb-4">
+            Поле заполнено верно.
+          </small>-->
+        <div class="input-group mb-3 mt-2">
+          <span class="input-group-text" id="basic-addon1" style="width: 200px"
+            >Ваш вес (кг)
+          </span>
+          <input
+            onclick="calc()"
+            id = "massaInput"
+            type="number"
+            class="form-control"
+           
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+            min="10" max="250" value="70"
+            pattern="^([0-9]{3}|[0-9]{2}[.]?[0-9]{1}|[0-9]{2}[,]?[0-9]{1})$"
+          />
+        </div>
+        <small class="form-text text-muted mb-4 ">
+            * Oбязательно к заполнению.
+          </small>
+
+         <!-- <small class="form-text text-muted valid-label mb-4">
+            Поле заполнено верно.
+          </small>-->
+        <div class="d-grid gap-2 mt-2">
+          <button onclick="calc()" class="btn btn-primary" type="button">Расчитать</button>
+        </div>
+    </br>
+        <p class="card-text ">Ваш индекс <output id="resultPlace">-</output></p>
+        <p class="card-text ">он означает :  <output id="resultItogo">-</output></p>
+      </div>
+    </div>
+  </body>
+</html>
